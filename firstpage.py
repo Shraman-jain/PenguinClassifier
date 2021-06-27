@@ -21,7 +21,7 @@ def app():
     They are of 3 species **CHISTRAP** ,**GENTOO** AND **ADELIE**.
     """)
     
-    image = Image.open('https://drive.google.com/uc?export=download&id=10e9OiUlFI4EapI9XV15diG3i2S_7z_B-')
+    image = Image.open('https://lh3.googleusercontent.com/fife/AAWUweV346xy21p7e0vQzJQPTEB2Qs6qPgJ5cDMYMLOAnwliQU6Y39sZq3aouFZ0oB5vCD95QRykuDyWK5HHkg73sGt-tbOslq0X8AHhy_cT4GAV7BvucIEy6MpJaFPnR8wEs2YML4zjYEklleTJnjm6W4M96S72VeU8sJQDmQn6O2wUjrKKxMp_rRGmbm9GCjFrOj8FncQj15eISpHoQD2QM3qz2YfUfNV-n_5vMQKlBACShjuMPDQIITWXTsnFBmilFrrT2QuDWKXiqPbxJGRlu2WXLYwcRe_Ewt59eDyK_s0MaKs9g5g3NjurXye2xSTSFwwxC8fhRqvbpTnaUJA5DkEJ5rYTCdVAUGtO7P9vuUtAGkFPx42_iLqYjBTI-mAxSopnFXZn3_iDDjpe4DVUUTyo3AYZesdmK_ezrl3gu13kgNC8x9T3AVjXhfHiB22zox-V10_UjskVNzKfrCuG3MLixNnv7rX69xHxMsX26wD24XeJBDkcVupzUaS04kZmtpxWhVNfxACLOkDEkfzgj4wqGLb3qvuPYidA0GKy4_X2T--tv5wJUM6DshJ6YyEygOYxYEtLulltF6RkZbiQKzBfG3ENUJ0oV4109tf2ly99FayjBG4r0tAZatVbcRtCXj_vSzfIYesV-Cj5xZODPoPpG4se9VdjVOiWaHC97b5hcwrRybMDVUfOyCNvliyO693cYsoq3pM5m_f6i2ySmG9lfPWQR7Q=w1366-h606-ft')
 
     st.image(image, caption="{} species".format('Palmer penguins'))
 
