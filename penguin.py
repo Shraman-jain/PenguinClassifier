@@ -10,7 +10,7 @@ import base64
 def app():
   @st.cache(allow_output_mutation=True)
   def load_model():
-    model=tf.keras.models.load_model('C:/Users/DELL/Desktop/PenguinClassifier1/Penguin_classifier_model.hdf5')
+    model=tf.keras.models.load_model('Penguin_classifier_model.hdf5')
     return model
   with st.spinner('Model is being loaded..'):
     model=load_model()
@@ -27,15 +27,16 @@ def app():
   st.write("""(**Note**:to download images left click on the link and then save as file with .png or .jpg format)
   """)
   
-  chim = Image.open("C:/Users/DELL/Desktop/PenguinClassifier1/Chinstrap penguin_1.jpg")
+  chim = Image.open('https://upload.wikimedia.org/wikipedia/commons/0/08/South_Shetland-2016-Deception_Island%E2%80%93Chinstrap_penguin_%28Pygoscelis_antarctica%29_04.jpg
+')
   ch = np.asarray(chim)
   ch_result = Image.fromarray(ch)
   
-  gent = Image.open('C:/Users/DELL/Desktop/PenguinClassifier1/Gentoo penguin_1.jpeg')
+  gent = Image.open('https://www.antarctica.gov.au/site/assets/files/45561/rs35470_dsc_4869.1600x0.jpg')
   gento = np.asarray(gent)
   gent_result = Image.fromarray(gento)
   
-  ade = Image.open('C:/Users/DELL/Desktop/PenguinClassifier1/Adélie penguin_3.jpeg')
+  ade = Image.open('https://oceana.org/sites/default/files/adelie_penguin.jpg')
   adelie = np.asarray(ade)
   ad_result = Image.fromarray(adelie)
   

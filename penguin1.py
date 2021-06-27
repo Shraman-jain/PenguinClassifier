@@ -92,16 +92,15 @@ def app():
     '''
     st.subheader('Prediction')
 
-    """
     if (str(penguins_species[prediction][0])=='Adelie'):
-        image = Image.open('C:/Users/DELL/Desktop/shraman/project/penguin_classification/adile_img.jpg')
+        image = Image.open('https://oceana.org/sites/default/files/adelie_penguin.jpg')
         
     elif (str(penguins_species[prediction][0])=='Chinstrap'):
-        image = Image.open('C:/Users/DELL/Desktop/shraman/project/penguin_classification/chinstrap_img.jpg')
+        image = Image.open('https://upload.wikimedia.org/wikipedia/commons/0/08/South_Shetland-2016-Deception_Island%E2%80%93Chinstrap_penguin_%28Pygoscelis_antarctica%29_04.jpg')
        
     elif (str(penguins_species[prediction][0])=='Gentoo'):
-        image = Image.open('C:/Users/DELL/Desktop/shraman/project/penguin_classification/gentoo_img.jpg')
-    """    
+        image = Image.open('https://www.antarctica.gov.au/site/assets/files/45561/rs35470_dsc_4869.1600x0.jpg')
+        
 
 
 
