@@ -21,7 +21,7 @@ def app():
     They are of 3 species **CHISTRAP** ,**GENTOO** AND **ADELIE**.
     """)
     
-    image = Image.open('C:/Users/DELL/Desktop/PenguinClassifier1/lter_penguins.png')
+    image = Image.open(lter_penguins.png)
 
     st.image(image, caption="{} species".format('Palmer penguins'))
 
