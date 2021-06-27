@@ -27,7 +27,7 @@ def app():
   st.write("""(**Note**:to download images left click on the link and then save as file with .png or .jpg format)
   """)
   
-  chim = Image.open("C:/Users/DELL/Desktop/shraman/project/penguin_classification/simple_images/Chinstrap_penguin/Chinstrap penguin_1.jpeg")
+  chim = Image.open("C:/Users/DELL/Desktop/PenguinClassifier1/Chinstrap penguin_1.jpg")
   ch = np.asarray(chim)
   ch_result = Image.fromarray(ch)
   
