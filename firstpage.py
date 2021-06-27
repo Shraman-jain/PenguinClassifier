@@ -21,7 +21,7 @@ def app():
     They are of 3 species **CHISTRAP** ,**GENTOO** AND **ADELIE**.
     """)
     
-    image = Image.open('https://allisonhorst.github.io/palmerpenguins/reference/figures/lter_penguins.png')
+    image = Image.open('https://drive.google.com/file/d/10e9OiUlFI4EapI9XV15diG3i2S_7z_B-/view?usp=sharing')
 
     st.image(image, caption="{} species".format('Palmer penguins'))
 
@@ -35,7 +35,7 @@ def app():
             (thanks Kristen Gorman for clarifying!):""")
 
 
-    image1 = Image.open('https://allisonhorst.github.io/palmerpenguins/reference/figures/culmen_depth.png')
+    image1 = Image.open('https://drive.google.com/file/d/1TVv1S83wB_06P8tUZQuTqRMBU0HfT1Wp/view?usp=sharing')
 
     st.image(image1, caption="{}".format('Bill dimensions'))
 
