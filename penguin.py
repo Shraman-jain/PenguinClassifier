@@ -10,7 +10,7 @@ import base64
 def app():
   @st.cache(allow_output_mutation=True)
   def load_model():
-    model=tf.keras.models.load_model('Penguin_classifier_model.hdf5')
+    model=tf.keras.models.load_model('C:/Users/DELL/Desktop/PenguinClassifier1/Penguin_classifier_model.hdf5')
     return model
   with st.spinner('Model is being loaded..'):
     model=load_model()
@@ -31,11 +31,11 @@ def app():
   ch = np.asarray(chim)
   ch_result = Image.fromarray(ch)
   
-  gent = Image.open('C:/Users/DELL/Desktop/shraman/project/penguin_classification/simple_images/Gentoo_penguin/Gentoo penguin_1.jpeg')
+  gent = Image.open('C:/Users/DELL/Desktop/PenguinClassifier1/Gentoo penguin_1.jpeg')
   gento = np.asarray(gent)
   gent_result = Image.fromarray(gento)
   
-  ade = Image.open('C:/Users/DELL/Desktop/shraman/project/penguin_classification/simple_images/Adélie_penguin/Adélie penguin_3.jpeg')
+  ade = Image.open('C:/Users/DELL/Desktop/PenguinClassifier1/Adélie penguin_3.jpeg')
   adelie = np.asarray(ade)
   ad_result = Image.fromarray(adelie)
   
