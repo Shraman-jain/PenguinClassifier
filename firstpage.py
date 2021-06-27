@@ -35,9 +35,9 @@ def app():
             (thanks Kristen Gorman for clarifying!):""")
 
 
-    image1 = Image.open('C:/Users/DELL/Desktop/shraman/project/penguin_classification/culmen_depth.png')
+    #image1 = Image.open('C:/Users/DELL/Desktop/shraman/project/penguin_classification/culmen_depth.png')
 
-    st.image(image1, caption="{}".format('Bill dimensions'))
+    #st.image(image1, caption="{}".format('Bill dimensions'))
 
     st.write("""
     ## Artwork

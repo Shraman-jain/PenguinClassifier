@@ -92,7 +92,7 @@ def app():
     '''
     st.subheader('Prediction')
 
-
+    """
     if (str(penguins_species[prediction][0])=='Adelie'):
         image = Image.open('C:/Users/DELL/Desktop/shraman/project/penguin_classification/adile_img.jpg')
         
@@ -101,12 +101,12 @@ def app():
        
     elif (str(penguins_species[prediction][0])=='Gentoo'):
         image = Image.open('C:/Users/DELL/Desktop/shraman/project/penguin_classification/gentoo_img.jpg')
-        
+    """    
 
 
 
     #image = Image.open('shraman.jpg')
-    st.image(image, caption="{} species".format(penguins_species[prediction][0]))
+    #st.image(image, caption="{} species".format(penguins_species[prediction][0]))
     maximum_probability=max(prediction_proba[0][2],prediction_proba[0][0],prediction_proba[0][1])
     result="There are **{:.2f} %** chances that this might be a **{} species**""".format(100 *float(maximum_probability) ,penguins_species[prediction][0])
     
