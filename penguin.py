@@ -27,8 +27,7 @@ def app():
   st.write("""(**Note**:to download images left click on the link and then save as file with .png or .jpg format)
   """)
   
-  chim = Image.open('https://upload.wikimedia.org/wikipedia/commons/0/08/South_Shetland-2016-Deception_Island%E2%80%93Chinstrap_penguin_%28Pygoscelis_antarctica%29_04.jpg
-')
+  chim = Image.open('https://upload.wikimedia.org/wikipedia/commons/0/08/South_Shetland-2016-Deception_Island%E2%80%93Chinstrap_penguin_%28Pygoscelis_antarctica%29_04.jpg')
   ch = np.asarray(chim)
   ch_result = Image.fromarray(ch)
   
