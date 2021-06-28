@@ -5,6 +5,7 @@ from PIL import Image, ImageOps
 import numpy as np
 from io import BytesIO
 import base64
+import urllib.request
 
 
 def app():
@@ -92,6 +93,7 @@ def app():
       #### Please upload an image file""")
   else:
       image = Image.open(file)
+      image.thumbnail((1800,1074))
       st.image(image, use_column_width=True)
       predictions = import_and_predict(image, model)
       score = tf.nn.softmax(predictions[0])

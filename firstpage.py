@@ -27,7 +27,7 @@ def app():
     "iter_penguin.png")
 
     image = Image.open("iter_penguin.png")
-
+    image.thumbnail((1800,1074))
     st.image(image, caption="{} species".format('Palmer penguins'))
     st.write("""
     ## Bill dimensions""")
@@ -42,7 +42,7 @@ def app():
     'https://s3.amazonaws.com/download.zyoga.in/culmen_depth.png',
     "bill_length.png")
     image1 = Image.open("bill_length.png")
-
+    image1.thumbnail((1800,1074))
     st.image(image1, caption="{}".format('Bill dimensions'))
 
     st.write("""
