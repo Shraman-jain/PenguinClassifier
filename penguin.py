@@ -27,15 +27,24 @@ def app():
   st.write("""(**Note**:to download images left click on the link and then save as file with .png or .jpg format)
   """)
   
-  chim = Image.open('https://upload.wikimedia.org/wikipedia/commons/0/08/South_Shetland-2016-Deception_Island%E2%80%93Chinstrap_penguin_%28Pygoscelis_antarctica%29_04.jpg')
+  urllib.request.urlretrieve(
+  'https://s3.amazonaws.com/download.zyoga.in/Chinstrap+penguin_1.jpeg',
+  "Chinstrap.png")
+  chim = Image.open("Chinstrap.png")
   ch = np.asarray(chim)
   ch_result = Image.fromarray(ch)
   
-  gent = Image.open('https://www.antarctica.gov.au/site/assets/files/45561/rs35470_dsc_4869.1600x0.jpg')
+  urllib.request.urlretrieve(
+  'https://s3.amazonaws.com/download.zyoga.in/Gentoo+penguin_1.jpeg',
+  "Gentoo.png") 
+  gent = Image.open("Gentoo.png")
   gento = np.asarray(gent)
   gent_result = Image.fromarray(gento)
   
-  ade = Image.open('https://oceana.org/sites/default/files/adelie_penguin.jpg')
+  urllib.request.urlretrieve(
+  'https://s3.amazonaws.com/download.zyoga.in/Ad%C3%A9lie+penguin_6.jpeg',
+  "Adelie.png")
+  ade = Image.open("Adelie.png")
   adelie = np.asarray(ade)
   ad_result = Image.fromarray(adelie)
   
