@@ -6,7 +6,7 @@ def app():
     st.write("# Penguin Prediction App")
     
     st.write("""
-    This web application predicts the **Palmer Penguin** species in which you can classify penguin in two ways- either by using an **IMAGE** of a penguin or by adding specific **DATA** of a penguin i.e. their (bill_length,bill_depth,flipper_length etc.).
+    This web application predicts the **Palmer Penguin** species in which you can classify penguin in two ways- either by using an **IMAGE** of a penguin or by adding specific **DATA** of a penguin i.e. their (bill-length,bill-depth,flipper-length etc.).
     """)
     st.write("""
     Data obtained from the [palmerpenguins library](https://github.com/allisonhorst/palmerpenguins)in R  by **Allison Horst**.
@@ -34,7 +34,7 @@ def app():
 
     st.write("""
             The culmen is the upper ridge of a bird’s bill. In the simplified penguins data, culmen length and depth are renamed as 
-            variables bill_length_mm and bill_depth_mm to be more intuitive.
+            variables bill-length and bill-depth to be more intuitive.
             For this penguin data, the culmen (bill) length and depth are measured as shown below 
             (thanks Kristen Gorman for clarifying!):""")
 

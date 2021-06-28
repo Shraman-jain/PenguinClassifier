@@ -30,7 +30,7 @@ def app():
     buffered = BytesIO()
     img.save(buffered, format="JPEG")
     img_str = base64.b64encode(buffered.getvalue()).decode()
-    href = f'<a href="data:file/jpg;base64,{img_str}">Left click on me !!!</a>'
+    href = f'<a href="data:file/jpg;base64,{img_str}">Right click on me !!!</a>'
     return href
   
   
@@ -57,10 +57,7 @@ def app():
       st.image(image, use_column_width=True)
       predictions = import_and_predict(image, model)
       score = tf.nn.softmax(predictions[0])
-    # st.write(predictions)
-    # st.write(score)
-      #result=""" This penguin is most likely to be a **{}** with a **{:.2f}** percent confidence.""".format(, )
-      result="""There are **{:.2f} %** chances that this might be a **{}** """.format(100 * np.max(score),class_names[np.argmax(score)])
+      result="""This might be a **{}** """.format(class_names[np.argmax(score)])
       if (100 * np.max(score))>50:
           st.success(result)
       else:
@@ -69,7 +66,7 @@ def app():
   st.write("""
       ### In case you need some Images to play with !!!
       """)
-  st.write("""(**Note**:to download images left click on the link and then save as file with .png or .jpg format)
+  st.write("""(**Note**:to download images right click on the link and then save as file with .png or .jpg format)
   """)
   
   urllib.request.urlretrieve(
