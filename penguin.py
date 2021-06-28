@@ -54,7 +54,7 @@ def app():
       #### Please upload an image file""")
   else:
       image = Image.open(file)
-      image.thumbnail((1800,1074))
+      image.thumbnail((700,700))
       st.image(image, use_column_width=True)
       predictions = import_and_predict(image, model)
       score = tf.nn.softmax(predictions[0])

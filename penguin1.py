@@ -98,7 +98,7 @@ def app():
     	'https://s3.amazonaws.com/download.zyoga.in/Ad%C3%A9lie+penguin_6.jpeg',
     	"Adelie.png")
         image2 = Image.open("Adelie.png")
-        image2.thumbnail((1500,774))
+        image2.thumbnail((700,700))
         st.image(image2, caption="{} species".format('Adelie penguins'))
     
     elif (str(penguins_species[prediction][0])=='Chinstrap'):
@@ -106,7 +106,7 @@ def app():
     	'https://s3.amazonaws.com/download.zyoga.in/Chinstrap+penguin_1.jpeg',
     	"Chinstrap.png")
         image3 = Image.open("Chinstrap.png")
-        image3.thumbnail((1500,774))
+        image3.thumbnail((700,700))
         st.image(image3, caption="{} species".format('Chinstrap penguins'))
     
     elif (str(penguins_species[prediction][0])=='Gentoo'):
@@ -114,7 +114,7 @@ def app():
     	'https://s3.amazonaws.com/download.zyoga.in/Gentoo+penguin_1.jpeg',
     	"Gentoo.png")
         image4 = Image.open("Gentoo.png")
-        image4.thumbnail((1500,774))
+        image4.thumbnail((700,700))
         st.image(image4, caption="{} species".format('Gentoo penguins'))
 
 
