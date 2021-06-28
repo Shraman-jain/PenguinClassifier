@@ -110,7 +110,10 @@ def app():
   st.write("""
     ## Created By
     Shraman Jain :
-    https://www.linkedin.com/in/shraman-jain/
+    Shraman Jain :\n
+    Linkedin:https://www.linkedin.com/in/shraman-jain/
+    \n	
+    github: https://github.com/Shraman-jain/PenguinClassifier
     """)
 
       
