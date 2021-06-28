@@ -52,6 +52,6 @@ def app():
     Data are available by CC-0 license in accordance with the Palmer Station LTER Data Policy and the LTER Data Access Policy for Type I data.
     ## Created By
     Shraman Jain :
-    https://www.linkedin.com/in/shraman-jain/
-    
+    Linkedin:https://www.linkedin.com/in/shraman-jain/
+    github: https://github.com/Shraman-jain/PenguinClassifier
     """)
