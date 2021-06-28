@@ -1,4 +1,5 @@
 import streamlit as st
+import urllib.request
 from PIL import Image
 
 def app():
@@ -21,10 +22,13 @@ def app():
     They are of 3 species **CHISTRAP** ,**GENTOO** AND **ADELIE**.
     """)
     
-    image = Image.open('https://s3.amazonaws.com/download.zyoga.in/lter_penguins.png')
+    urllib.request.urlretrieve(
+    'https://s3.amazonaws.com/download.zyoga.in/culmen_depth.png',
+    "bill_length.png")
+
+    image = Image.open("bill_length.png")
 
     st.image(image, caption="{} species".format('Palmer penguins'))
-
     st.write("""
     ## Bill dimensions""")
 
@@ -37,7 +41,7 @@ def app():
 
     image1 = Image.open('https://s3.amazonaws.com/download.zyoga.in/culmen_depth.png')
 
-    st.image(image1, caption="{}".format('Bill dimensions'))
+    st.image(image, caption="{}".format('Bill dimensions'))
 
     st.write("""
     ## Artwork
