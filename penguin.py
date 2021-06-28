@@ -96,7 +96,7 @@ def app():
   st.markdown(chinstrap, unsafe_allow_html=True)
   
   #st.text('Adelie photo')
-  Adelie=get_image_download_link(ad_resultm,'sample2')
+  Adelie=get_image_download_link(ad_result,'sample2')
   st.markdown(Adelie, unsafe_allow_html=True)
   
   #st.text('Gentoo photo')
