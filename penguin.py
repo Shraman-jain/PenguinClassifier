@@ -38,7 +38,7 @@ def app():
   class_names=['Adélie_penguin', 'Chinstrap_penguin', 'Gentoo_penguin']
   def import_and_predict(image_data, model):
     
-          size = (180,180)    
+          size = (250,250)    
           image = ImageOps.fit(image_data, size, Image.ANTIALIAS)
           image = np.asarray(image)
           img = cv2.cvtColor(image, cv2.COLOR_BGR2RGB)
@@ -54,7 +54,6 @@ def app():
       #### Please upload an image file""")
   else:
       image = Image.open(file)
-      image.thumbnail((700,700))
       st.image(image, use_column_width=True)
       predictions = import_and_predict(image, model)
       score = tf.nn.softmax(predictions[0])
