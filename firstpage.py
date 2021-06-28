@@ -42,7 +42,7 @@ def app():
     'https://s3.amazonaws.com/download.zyoga.in/culmen_depth.png',
     "bill_length.png")
     image1 = Image.open("bill_length.png")
-    image1.thumbnail((1800,1074))
+    image1.thumbnail((800,800))
     st.image(image1, caption="{}".format('Bill dimensions'))
 
     st.write("""
