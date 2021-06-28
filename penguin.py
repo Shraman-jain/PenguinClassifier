@@ -6,6 +6,7 @@ import numpy as np
 from io import BytesIO
 import base64
 import urllib.request
+import requests
 
 
 def app():
@@ -22,18 +23,18 @@ def app():
           )
 
   file = st.file_uploader("Please upload a file", type=["jpg", "png","jpeg"])
-  def get_image_download_link(img):
-    """Generates a link allowing the PIL image to be downloaded
-	  in:  PIL image
-	  out: href string
-	  """
+  """def get_image_download_link(img):
+    #Generates a link allowing the PIL image to be downloaded
+	  #in:  PIL image
+	  #out: href string
+	  
     buffered = BytesIO()
     img.save(buffered, format="JPEG")
     img_str = base64.b64encode(buffered.getvalue()).decode()
     href = f'<a href="data:file/jpg;base64,{img_str}">Right click on me !!!</a>'
     return href
   
-  
+  """
   st.set_option('deprecation.showfileUploaderEncoding', False)
   class_names=['Adélie_penguin', 'Chinstrap_penguin', 'Gentoo_penguin']
   def import_and_predict(image_data, model):
@@ -66,9 +67,9 @@ def app():
   st.write("""
       ### In case you need some Images to play with !!!
       """)
-  st.write("""(**Note**:to download images right click on the link and then save as file with .png or .jpg format)
-  """)
-  
+  #st.write("""(**Note**:to download images right click on the link and then save as file with .png or .jpg format)
+  #""")
+  """
   urllib.request.urlretrieve(
   'https://s3.amazonaws.com/download.zyoga.in/Chinstrap+penguin_1.jpeg',
   "Chinstrap.png")
@@ -101,9 +102,25 @@ def app():
   #st.text('Gentoo photo')
   Gentoo=get_image_download_link(gent_result)
   st.markdown(Gentoo, unsafe_allow_html=True)
-
-
-
+"""
+  image1 = st.button('Image1')
+  if image1:
+      response = requests.get("https://s3.amazonaws.com/download.zyoga.in/Ad%C3%A9lie+penguin_6.jpeg")
+      file = open("sample_image1.png", "wb")
+      file.write(response.content)
+      file.close()
+  image2 = st.button('Image2')
+  if image2:
+      response = requests.get("https://s3.amazonaws.com/download.zyoga.in/Gentoo+penguin_1.jpeg")
+      file = open("sample_image2.png", "wb")
+      file.write(response.content)
+      file.close()
+  image3 = st.button('Image3')
+  if image3:
+      response = requests.get("https://s3.amazonaws.com/download.zyoga.in/Chinstrap+penguin_1.jpeg")
+      file = open("sample_image3.png", "wb")
+      file.write(response.content)
+      file.close()
   st.write("""
     ## Created By
     Shraman Jain :
