@@ -6,7 +6,7 @@ def app():
     st.write("# Penguin Prediction App")
     
     st.write("""
-    ### This web application predicts the **Palmer Penguin** species in which you can classify penguin in two ways- either by using an **IMAGE** of a penguin or by adding specific **DATA** of a penguin i.e. their (bill_length,bill_depth,flipper_length etc.).
+    This web application predicts the **Palmer Penguin** species in which you can classify penguin in two ways- either by using an **IMAGE** of a penguin or by adding specific **DATA** of a penguin i.e. their (bill_length,bill_depth,flipper_length etc.).
     """)
     st.write("""
     Data obtained from the [palmerpenguins library](https://github.com/allisonhorst/palmerpenguins)in R  by **Allison Horst**.

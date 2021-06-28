@@ -12,8 +12,8 @@ def app():
           # Data Prediction
           """
           )
-    st.subheader(""" 
-    You can either upload a csv file with one row or can give the data using the input feature.
+    st.write(""" 
+    ### You can either upload a csv file with one row or can give the data using the input feature.
     """)
     st.sidebar.header('User Input Features')
 
