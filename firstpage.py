@@ -23,10 +23,10 @@ def app():
     """)
     
     urllib.request.urlretrieve(
-    'https://s3.amazonaws.com/download.zyoga.in/culmen_depth.png',
-    "bill_length.png")
+    'https://s3.amazonaws.com/download.zyoga.in/lter_penguins.png',
+    "iter_penguin.png")
 
-    image = Image.open("bill_length.png")
+    image = Image.open("iter_penguin.png")
 
     st.image(image, caption="{} species".format('Palmer penguins'))
     st.write("""
@@ -38,10 +38,12 @@ def app():
             For this penguin data, the culmen (bill) length and depth are measured as shown below 
             (thanks Kristen Gorman for clarifying!):""")
 
+    urllib.request.urlretrieve(
+    'https://s3.amazonaws.com/download.zyoga.in/culmen_depth.png',
+    "bill_length.png")
+    image1 = Image.open("bill_length.png)
 
-    image1 = Image.open('https://s3.amazonaws.com/download.zyoga.in/culmen_depth.png')
-
-    st.image(image, caption="{}".format('Bill dimensions'))
+    st.image(image1, caption="{}".format('Bill dimensions'))
 
     st.write("""
     ## Artwork
