@@ -22,33 +22,6 @@ def app():
           )
 
   file = st.file_uploader("Please upload a file", type=["jpg", "png","jpeg"])
-  st.write("""
-      ### In case you need some Images to play with !!!
-      """)
-  st.write("""(**Note**:to download images left click on the link and then save as file with .png or .jpg format)
-  """)
-  
-  urllib.request.urlretrieve(
-  'https://s3.amazonaws.com/download.zyoga.in/Chinstrap+penguin_1.jpeg',
-  "Chinstrap.png")
-  chim = Image.open("Chinstrap.png")
-  ch = np.asarray(chim)
-  ch_result = Image.fromarray(ch)
-  
-  urllib.request.urlretrieve(
-  'https://s3.amazonaws.com/download.zyoga.in/Gentoo+penguin_1.jpeg',
-  "Gentoo.png") 
-  gent = Image.open("Gentoo.png")
-  gento = np.asarray(gent)
-  gent_result = Image.fromarray(gento)
-  
-  urllib.request.urlretrieve(
-  'https://s3.amazonaws.com/download.zyoga.in/Ad%C3%A9lie+penguin_6.jpeg',
-  "Adelie.png")
-  ade = Image.open("Adelie.png")
-  adelie = np.asarray(ade)
-  ad_result = Image.fromarray(adelie)
-  
   def get_image_download_link(img):
     """Generates a link allowing the PIL image to be downloaded
 	  in:  PIL image
@@ -59,19 +32,7 @@ def app():
     img_str = base64.b64encode(buffered.getvalue()).decode()
     href = f'<a href="data:file/jpg;base64,{img_str}">Left click on me !!!</a>'
     return href
-  #st.text('Chinstrap photo')
-  chinstrap=get_image_download_link(ch_result)
-  st.markdown(chinstrap, unsafe_allow_html=True)
   
-  #st.text('Adelie photo')
-  Adelie=get_image_download_link(ad_result)
-  st.markdown(Adelie, unsafe_allow_html=True)
-  
-  #st.text('Gentoo photo')
-  Gentoo=get_image_download_link(gent_result)
-  st.markdown(Gentoo, unsafe_allow_html=True)
-
-
   
   st.set_option('deprecation.showfileUploaderEncoding', False)
   class_names=['Adélie_penguin', 'Chinstrap_penguin', 'Gentoo_penguin']
@@ -105,6 +66,48 @@ def app():
           st.success(result)
       else:
           st.warning(result)
+  
+  st.write("""
+      ### In case you need some Images to play with !!!
+      """)
+  st.write("""(**Note**:to download images left click on the link and then save as file with .png or .jpg format)
+  """)
+  
+  urllib.request.urlretrieve(
+  'https://s3.amazonaws.com/download.zyoga.in/Chinstrap+penguin_1.jpeg',
+  "Chinstrap.png")
+  chim = Image.open("Chinstrap.png")
+  ch = np.asarray(chim)
+  ch_result = Image.fromarray(ch)
+  
+  urllib.request.urlretrieve(
+  'https://s3.amazonaws.com/download.zyoga.in/Gentoo+penguin_1.jpeg',
+  "Gentoo.png") 
+  gent = Image.open("Gentoo.png")
+  gento = np.asarray(gent)
+  gent_result = Image.fromarray(gento)
+  
+  urllib.request.urlretrieve(
+  'https://s3.amazonaws.com/download.zyoga.in/Ad%C3%A9lie+penguin_6.jpeg',
+  "Adelie.png")
+  ade = Image.open("Adelie.png")
+  adelie = np.asarray(ade)
+  ad_result = Image.fromarray(adelie)
+  
+  #st.text('Chinstrap photo')
+  chinstrap=get_image_download_link(ch_result)
+  st.markdown(chinstrap, unsafe_allow_html=True)
+  
+  #st.text('Adelie photo')
+  Adelie=get_image_download_link(ad_result)
+  st.markdown(Adelie, unsafe_allow_html=True)
+  
+  #st.text('Gentoo photo')
+  Gentoo=get_image_download_link(gent_result)
+  st.markdown(Gentoo, unsafe_allow_html=True)
+
+
+
   st.write("""
     ## Created By
     Shraman Jain :
