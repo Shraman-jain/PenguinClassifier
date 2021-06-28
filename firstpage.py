@@ -35,7 +35,7 @@ def app():
             (thanks Kristen Gorman for clarifying!):""")
 
 
-    image1 = Image.open('https://drive.google.com/uc?export=download&id=1TVv1S83wB_06P8tUZQuTqRMBU0HfT1Wp')
+    image1 = Image.open('https://s3.amazonaws.com/download.zyoga.in/culmen_depth.png')
 
     st.image(image1, caption="{}".format('Bill dimensions'))
 
